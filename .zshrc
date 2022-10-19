@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/lavoiems/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,26 +106,23 @@ PATH="$HOME/miniconda3/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lavoiems/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/lavoiems/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/lavoiems/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/lavoiems/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export SERVER_NAME='mila'
-export EXPERIMENT_ROOT='/home/mila/l/lavoiems/playground/DTL/'
-export ARTEFACT_ROOT='/Volumes/Artefacts/Projects/LotteryTicket/'
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.0.3/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 
-export PATH=$PATH:/home/lavoiems/.local/share/gem/ruby/3.0.0/bin
-export VIMINIT=":source /home/lavoiems/.vimrc" 
+export PATH=$PATH:$HOME.local/share/gem/ruby/3.0.0/bin
+export VIMINIT=":source $HOME/.vimrc" 
